@@ -1,7 +1,8 @@
-# Apex-Legends-Exploits-Offsets
+# Apex Legends Season 8 Offsets
 Some Apex Legends Cheats Exploits and Offsets Updated Every Update
 
 
+# How to use Exploits Offsets
 [FOR DUMP PEOPLE]
 To get the offsets from thoose Addresses just open the calculator go to Programmer Option and put HEX option.
 Then take one of thoose Addresses and paste in the calculator.
