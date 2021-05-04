@@ -1,43 +1,43 @@
-#define ENTITY_SIZE_DEF				0x42E0		    //biggest entity offset //0x42E0
- 
-#define OFFSET_ENTITYLIST		    0x18C62F8		//cl_entitylist
-#define OFFSET_LOCAL_ENT			0x1C75558		//LocalPlayer
- 
-#define OFFSET_TEAM					0x0450			//m_iTeamNum
-#define OFFSET_HEALTH				0x0440			//m_iHealth
-#define OFFSET_NAME					0x0589			//m_iName
-#define OFFSET_SIG_NAME				0x0580			//m_iSignifierName
-#define OFFSET_SHIELD				0x0170			//m_shieldHealth
-#define OFFSET_MAX_SHIELD			0x0174			//m_shieldHealth +0x4
-#define OFFSET_VISIBLE_TIME         0x1A4C          //m_visibletime
- 
-#define OFFSET_LIFE_STATE			0x0798			//m_lifeState
-#define OFFSET_BLEED_OUT_STATE		0x25F0			//m_bleedoutState
- 
-#define OFFSET_ITEM_ID				0x1618			//m_customScriptInt
- 
-#define OFFSET_BULLET_SPEED			0x1E50			//m_flProjectileSpeed
-#define OFFSET_BULLET_GRAVITY		0x1E58			//m_flProjectileScale
- 
-#define OFFSET_CURRENT_WEAPON		0x19EC			//m_latestPrimaryWeapons
-#define OFFSET_ORIGIN				0x14C			//m_vecAbsOrigin
-#define OFFSET_BONES				0xF38			//m_nForceBone + 0x50 - 0x8 -> 48 8B 97 ?? ?? ?? ?? 48 8D 04 5B 48 C1
-#define OFFSET_AIMPUNCH				0x2390			//m_vecPunchWeapon_Angle
-#define OFFSET_CAMERAPOS			0x1E30			// Search CameraPos, first movss at bottom
-#define OFFSET_VIEWANGLES			0x2470			//m_ammoPoolCapacity - 0x14  -> 0F 57 C0 8B 86 ?? ?? ?? ?? F3
-#define OFFSET_BREATH_ANGLES		(OFFSET_VIEWANGLES - 0x10)
-#define OFFSET_OBSERVER_MODE		0x32A4			//m_iObserverMode
-#define OFFSET_OBSERVING_TARGET		0x32A8			//m_hObserverTarget
- 
-#define OFFSET_HELMET_TYPE			0x4270			//m_helmetType
- 
-#define GLOW_CONTEXT 0x3C8 //Script_Highlight_SetCurrentContext
-#define GLOW_LIFE_TIME 0x3A4 //Script_Highlight_SetLifeTime + 4
-#define GLOW_DISTANCE 0x3B4 //Script_Highlight_SetFarFadeDist
-#define GLOW_TYPE 0x2C4 //Script_Highlight_GetState + 4
-#define GLOW_COLOR 0x1D0 //Script_CopyHighlightState 15th mov
-#define GLOW_VISIBLE_TYPE 0x3D0 //Script_Highlight_SetVisibilityType 5th mov
-#define GLOW_FADE 0x388 //Script_Highlight_GetCurrentInsideOpacity 3rd result of 3 offsets consecutive or first + 8
- 
-#define OFFSET_MATRIX				0x1B3BD0		//ViewMatrix
-#define OFFSET_RENDER				0x4076FC0 	 	//ViewRender
+uint32_t TIMESTAMP = 0x60838F5B; // OLD: 0x60773399
+uint32_t CHECKSUM = 0x203B149; // OLD: 0x1FF8CA1
+uint32_t ENTITY_LIST = 0x18EDA78; // OLD: 0x18DB438
+uint32_t LOCAL_POINTER = 0x1C9D198; // OLD: 0x1C8AA98
+uint32_t LOCAL_INDEX = 0x11BC998; // OLD: 0x11AA008
+uint32_t SIGNON_STATE = 0x128C2C8; // OLD: 0x12795A8
+uint32_t LEVEL_NAME = 0x128C3E0; // OLD: 0x12796C0
+uint32_t FORCE_JUMP = 0x40C1C08; // OLD: 0x408F330
+uint32_t FORCE_ATTACK = 0x40C1B98; // OLD: 0x408F2B8
+uint32_t FORCE_RELOAD = 0x40C1BB8; // OLD: 0x408F2D8
+uint32_t FIELD_OF_VIEW = 0x11BDEA8; // OLD: 0x11AB338
+uint32_t GLOBAL_VARS = 0x128BF40; // OLD: 0x1279220
+uint32_t VIEW_RENDER = 0x40BF2E8; // OLD: 0x408C968
+uint32_t PLAYER_HEALTH = 0x438; // OLD: 0x440
+uint32_t PLAYER_TEAM = 0x448; // OLD: 0x450
+uint32_t PLAYER_NEXTATTACK = 0x19E0; // OLD: 0x1960
+uint32_t PLAYER_WEAPON = 0x1A6C; // OLD: 0x19EC
+uint32_t PLAYER_NON_OFFHAND = 0x1A7C; // OLD: 0x19FC
+uint32_t PLAYER_OFFHAND = 0x1A7E; // OLD: 0x19FE
+uint32_t PLAYER_ZOOMING = 0x1BE1; // OLD: 0x1B41
+uint32_t PLAYER_TICK = 0x1C74; // OLD: 0x1BD4
+uint32_t PLAYER_CAMERAPOS = 0x1ED0; // OLD: 0x1E30
+uint32_t PLAYER_VISIBILITY = 0x1ACC; // OLD: 0x1A4C
+uint32_t PLAYER_RECOIL = 0x2430; // OLD: 0x2390
+uint32_t PLAYER_DYNAMIC_ANGLE = 0x2508; // OLD: 0x2468
+uint32_t PLAYER_VIEW_ANGLE = 0x2518; // OLD: 0x2478
+uint32_t PLAYER_BLEEDOUT = 0x2688; // OLD: 0x25E8
+uint32_t PLAYER_CLIMBING = 0x2AD5; // OLD: 0x2A35
+uint32_t PLAYER_VIEWMODEL = 0x2BDC; // OLD: 0x2B34
+uint32_t PLAYER_OBSERVER_MODE = 0x334C; // OLD: 0x32A4
+uint32_t PLAYER_OBSERVER_TARGET = 0x3350; // OLD: 0x32A8
+uint32_t PLAYER_FOV = 0x4190; // OLD: 0x40DC
+uint32_t WEAPON_NEXTATTACK = 0x169C; // OLD: 0x161C
+uint32_t WEAPON_MODEL = 0x16A8; // OLD: 0x1628
+uint32_t WEAPON_AMMO = 0x16C4; // OLD: 0x1644
+uint32_t WEAPON_RELOADING = 0x16DA; // OLD: 0x165A
+uint32_t WEAPON_PLAYERDATA = 0x16F8; // OLD: 0x1678
+uint32_t WEAPON_SHOTS = 0x181C; // OLD: 0x179C
+uint32_t WEAPON_BITFIELD = 0x1834; // OLD: 0x17B4
+uint32_t WEAPON_NAME = 0x1850; // OLD: 0x17D0
+uint32_t WEAPON_SPEED = 0x1ED0; // OLD: 0x1E50
+uint32_t WEAPON_GRAVITY = 0x1ED8; // OLD: 0x1E58
+uint32_t LOOT_INDEX = 0x1698; // OLD: 0x1618
