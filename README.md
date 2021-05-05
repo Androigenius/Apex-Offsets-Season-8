@@ -1,5 +1,7 @@
-# Apex Legends Season 9 Offsets
-Some Apex Legends Cheats Exploits and Offsets Updated Every Update
+# Apex Legends Updated Season 9 Offsets
+Apex Legends Offsets Updated Every Update
+
+
 
 
 
